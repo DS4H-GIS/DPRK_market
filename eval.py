@@ -53,7 +53,7 @@ def get_val_augmentation(size):
 
 model_name = args.model.split("/")[-1].split(".")[0]
 train_timeline = model_name.split("_")[-1]
-dir_path = f'./result/UNet_NK_binary'
+dir_path = f'./result/DPRK_market'
 
 if not os.path.isdir(dir_path):
     os.mkdir(dir_path)
@@ -65,8 +65,8 @@ valtransform = get_val_augmentation([256, 256])
 normalize = get_normalize()
 
 
-testset = GPSDatasetEVAL(metadata=f"./multiyear/metadata/NK_market_v2_typeA/NK_market_v2_typeA_test_metadata.csv",
-                      root_dir=f'./multiyear/NK_market_2_typeA/image',
+testset = GPSDatasetEVAL(metadata=f"./multiyear/metadata/DPRK_market/DPRK_market_test_metadata.csv",
+                      root_dir=f'./multiyear/DPRK_market/image',
                       train = False,
                       transform=valtransform,
                       normalize=normalize)
