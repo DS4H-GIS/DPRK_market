@@ -110,17 +110,17 @@ valtransform = get_val_augmentation([256, 256])
 normalize = get_normalize()
 
 
-labelset = GPSDatasetSUP(metadata=f'./multiyear/metadata/NK_market_v2_typeA/NK_market_v2_typeA_train_metadata.csv',
-                      root_dir=f'./multiyear/NK_market_2_typeA/image',
-                      label_dir=f'./multiyear/NK_market_2_typeA/label',
+labelset = GPSDatasetSUP(metadata=f'./multiyear/metadata/DPRK_market/DPRK_market_train_metadata.csv',
+                      root_dir=f'./multiyear/DPRK_market/image',
+                      label_dir=f'./multiyear/DPRK_market/label',
                       train = True,
                       transform=traintransform,
                       normalize=normalize)
 
 
-testset = GPSDatasetSUP(metadata=f'./multiyear/metadata/NK_market_v2_typeA/NK_market_v2_typeA_test_metadata.csv',
-                      root_dir=f'./multiyear/NK_market_2_typeA/image',
-                      label_dir=f'./multiyear/NK_market_2_typeA/label',
+testset = GPSDatasetSUP(metadata=f'./multiyear/metadata/DPRK_market/DPRK_market_test_metadata.csv',
+                      root_dir=f'./multiyear/DPRK_market/image',
+                      label_dir=f'./multiyear/DPRK_market/label',
                       train = False,
                       transform=valtransform,
                       normalize=normalize)
@@ -212,7 +212,7 @@ def test(epoch):
         }
         if not os.path.isdir('checkpoint'):
             os.mkdir('checkpoint')
-        torch.save(state, f'./checkpoint/UNet_NK_{args.weight}.t7')
+        torch.save(state, f'./checkpoint/DPRK_market.t7')
         best_miou = miou
 
 
