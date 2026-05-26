@@ -44,7 +44,7 @@ python main.py --epoch 100 --lr 0.01 --weight 0.4
 - `--lr`: learning rate
 
 ## Checkpoint
-You can download our pretrained model [here](https://drive.google.com/file/d/1f3eGfvlVkBiHgicOJN6wougZug10DrT3/view?usp=drive_link)
+You can download our pretrained model [here](https://drive.google.com/file/d/1f3eGfvlVkBiHgicOJN6wougZug10DrT3/view?usp=drive_link).
 
 ## Evaluation
 ```bash
