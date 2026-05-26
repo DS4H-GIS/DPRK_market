@@ -43,6 +43,9 @@ python main.py --epoch 100 --lr 0.01 --weight 0.4
 - `--weight`: class weight for the non-market category (used in Focal Loss)
 - `--lr`: learning rate
 
+## Checkpoint
+You can download our pretrained model [here](https://drive.google.com/file/d/1f3eGfvlVkBiHgicOJN6wougZug10DrT3/view?usp=drive_link)
+
 ## Evaluation
 ```bash
 python eval.py --model <path_to_model_checkpoint>
